@@ -8,5 +8,13 @@ describe Game do
 
       expect(game.player_2.hp).to eq 50
     end
+
+    it "should be able to switch turns" do
+      game = Game.new("Kealan", "Charlie")
+      game.attack
+      game.attack
+
+      expect(game.player_1.hp).to eq 50
+    end
   end
 end
